@@ -103,5 +103,130 @@ public class Array {
     }
 
 
+    /**
+     * 得到索引index的数组元素
+     * @param index
+     * @return
+     */
+    public int get(int index){
+        if(index < 0 || index >= size){
+            throw new IllegalArgumentException("get fail, index is illegal");
+        }
+
+        return data[index];
+    }
+
+    /**
+     * 将索引index的元素设置为新元素e
+     * @param index
+     * @param e
+     */
+    public void set(int index ,int e){
+        if(index < 0 || index >= size){
+            throw new IllegalArgumentException("set fail, index is illegal");
+        }
+
+        data[index] = e;
+    }
+
+
+    /**
+     * 数组是否包含元素e
+     * @param e
+     * @return
+     */
+    public boolean contains(int e){
+        for(int i = 0; i < size; i ++){
+            if(data[i] == e)
+                return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * 查找元素e的下标
+     * @param e
+     * @return
+     */
+    public int find(int e){
+        for(int i = 0; i < size; i ++){
+            if(data[i] == e)
+                return i;
+        }
+
+        return -1;
+    }
+
+    /**
+     * 删除数组头元素
+     * @return
+     */
+    public int removeFirst(){
+        return this.remove(0);
+    }
+
+    /**
+     * 删除数组末尾元素
+     * @return
+     */
+    public int removeLast(){
+        return this.remove(size - 1);
+    }
+
+    public void removeElement(int e){
+        int index = find(e);
+
+        if(index != -1){
+            remove(index);
+        }else {
+            throw new IllegalArgumentException("removeElement fail , the element is not exist in array");
+        }
+
+    }
+
+    /**
+     * 删除索引Index的元素
+     * @param index
+     * @return
+     */
+    public int remove(int index){
+
+        if(index < 0 || index >= size)
+            throw new IllegalArgumentException("remove fail , index is illegal");
+
+        int res = data[index];
+
+        for(int i = index + 1; i < size; i ++){
+            data[i-1] = data[i];
+        }
+        size--;
+
+        return res;
+    }
+
+
+    /**
+     * 重写toString函数
+     * @return
+     */
+    @Override
+    public String toString(){
+
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Array size is %d,  Array capacity is %d \n",size,data.length));
+        res.append("[");
+
+        for(int i = 0; i < size; i++){
+            res.append(data[i]);
+            if(i != size - 1)
+                res.append(",");
+        }
+
+        res.append("]");
+        return res.toString();
+    }
+
+
 
 }
