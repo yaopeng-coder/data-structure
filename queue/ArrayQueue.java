@@ -68,7 +68,7 @@ public class ArrayQueue<E> implements Queue<E> {
 
     @Override
     public String toString() {
-        StringBuilder res = new StringBuilder(String.format("Queue: size : %d \ntop[",getSize()));
+        StringBuilder res = new StringBuilder(String.format("Queue: size : %d   capacity: %d \ntop[",getSize(),getCapacity()));
 
         for(int i = 0; i < array.getSize(); i ++){
             res.append(array.get(i));

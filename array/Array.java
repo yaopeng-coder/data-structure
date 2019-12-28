@@ -51,6 +51,7 @@ public class Array<E> {
 
     /**
      * 向数组末尾插入新元素e
+     * 时间复杂度 O(1),虽然resize是一个O(n)的操作，但是根据均摊时间复杂度分析，addLast还是一个O(1)的操作
      * @param e
      */
     public void addLast(E e){
@@ -59,6 +60,7 @@ public class Array<E> {
 
     /**
      * 向数组头部插入新元素e
+     * 时间复杂度 O(n)
      * @param e
      */
     public void addFirst(E e){
@@ -67,6 +69,7 @@ public class Array<E> {
 
     /**
      * 向索引Index位置插入一个新元素e
+     * 时间复杂度 O(n)
      * @param index
      * @param e
      */
@@ -105,6 +108,7 @@ public class Array<E> {
 
     /**
      * 得到索引index的数组元素
+     * 时间复杂度 O(1)
      * @param index
      * @return
      */
@@ -117,7 +121,27 @@ public class Array<E> {
     }
 
     /**
+     * 得到数组第一个元素
+     * 时间复杂度O(1)
+     * @return
+     */
+    public E getFirst(){
+
+        return get(0);
+    }
+
+    /**
+     * 得到数组最后一个元素
+     * 时间复杂度O(1)
+     * @return
+     */
+    public E getLast(){
+        return get(size - 1);
+    }
+
+    /**
      * 将索引index的元素设置为新元素e
+     * 时间复杂度O(1)
      * @param index
      * @param e
      */
@@ -132,6 +156,7 @@ public class Array<E> {
 
     /**
      * 数组是否包含元素e
+     * 时间复杂度 O(n)
      * @param e
      * @return
      */
@@ -146,6 +171,7 @@ public class Array<E> {
 
     /**
      * 查找元素e的下标
+     * 时间复杂度 O(n)
      * @param e
      * @return
      */
@@ -160,6 +186,7 @@ public class Array<E> {
 
     /**
      * 删除数组头元素
+     * 时间复杂度 O(n)
      * @return
      */
     public E removeFirst(){
@@ -168,12 +195,18 @@ public class Array<E> {
 
     /**
      * 删除数组末尾元素
+     * 时间复杂度 O(1)，虽然resize是一个O(n)的操作，但是根据均摊时间复杂度分析，removeLast还是一个O(1)的操作
      * @return
      */
     public E removeLast(){
         return remove(size - 1);
     }
 
+    /**
+     * 删除指定的元素
+     * 时间复杂度 O(n)
+     * @param e
+     */
     public void removeElement(E e){
         int index = find(e);
 
@@ -187,6 +220,7 @@ public class Array<E> {
 
     /**
      * 删除索引Index的元素
+     * 时间复杂度 O(n)
      * @param index
      * @return
      */
@@ -201,14 +235,21 @@ public class Array<E> {
             data[i-1] = data[i];
         }
         size--;
+        //置为null是为了垃圾回收，因为数组中存储的是对象的引用，置为null时对象才能被回收
         data[size] = null;
 
-        if(size == data.length / 2)
+        //这种情况只有数组容量大小为1时会出现，防止大小为1时缩容为0
+        if(size == data.length / 4 && data.length / 2 != 0)
             resize(data.length / 2);
 
         return res;
     }
 
+    /**
+     * 对数组进行扩容
+     * 时间复杂度 O(n)
+     * @param newCapacity
+     */
     private void resize(int newCapacity){
         E[] newData = (E[]) new Object[newCapacity];
 

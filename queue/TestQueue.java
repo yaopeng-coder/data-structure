@@ -22,7 +22,7 @@ public class TestQueue {
         for(int i = 0; i < 20; i ++){
             queue1.enqueue(i);
             System.out.println(queue1);
-            if( i % 3 == 1){
+            if( i % 3 == 2){
                 queue1.dequeue();
                 System.out.println(queue1);
             }

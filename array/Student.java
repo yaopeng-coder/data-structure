@@ -23,6 +23,7 @@ public class Student {
 
     public static void main(String[] args){
 
+
         Array<Student> array = new Array<>();
 
         Student s1 = new Student("小红",60);
