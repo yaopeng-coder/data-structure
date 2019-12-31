@@ -25,6 +25,7 @@ public class TestCompareQueue {
         Random random = new Random();
 
         long startTime = System.nanoTime();
+     //   long time1 = System.currentTimeMillis();
 
         for(int i = 0; i < opCount; i ++)
             queue.enqueue(random.nextInt(Integer.MAX_VALUE));
@@ -33,8 +34,11 @@ public class TestCompareQueue {
             queue.dequeue();
 
         long endTime = System.nanoTime();
+   //     long time2 = System.currentTimeMillis();
 
         double res = (endTime - startTime) / 1000000000.0;
+      //  double res1 = (time1 - time2)/1000.0000000;
+      //  System.out.println("res1:"+ res1);
 
         return res;
 

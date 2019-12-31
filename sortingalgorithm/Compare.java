@@ -19,16 +19,26 @@ public class Compare {
         //冒泡时间：25.3183559s
        //   new BubbleSort().bubbleSort(arr);
 
-        //简单排序时间：6.9415147s
+        //快速排序 0.0360327
+      //  new QuickSort().quickSort(arr,0,arr.length - 1);
+
+        //简单选择排序：6.9415147s
       //   new SimpleSelectSort().simpleSelectSort(arr);
 
          //简单插入排序:2.2622407
-        new InsertSort().insertSort(arr);
+      //  new InsertSort().insertSort(arr);
+
+        //希尔排序 0.0010356s 不稳定
+        //new ShellSort().shellSort(arr);
+
+        //归并排序 :0.0404308
+        new MergeSort().mergeSort(arr,0,arr.length - 1 );
 
 
         long endTime  = System.nanoTime();
         double res = (endTime - startTime) / 1000000000.0;
         System.out.println(res);
+
 
 
     }

@@ -83,7 +83,7 @@ public class LeetCodeRemove {
 
     public static void main(String[] args){
 
-        int[] arr = {1};
+        int[] arr = {1,2,1,3,4,1};
         ListNode head = new ListNode(arr);
         System.out.println(head);
 

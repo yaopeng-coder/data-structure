@@ -8,7 +8,7 @@ public class SimpleSelectSort {
 
     /**
      * 时间复杂度O(N^2)
-     * 空间复杂度O(1)
+     * 空间复杂度O(1) 不稳定
      * 简单选择排序
      * @param arr
      */
