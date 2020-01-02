@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/linkedlist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingalgorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bst" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

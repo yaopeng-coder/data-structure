@@ -19,8 +19,7 @@ public class LinkedListCreator {
             return null;
 
         ListNode head = new ListNode(arr[0]);
-        ListNode subListHead = createLinkedList(Arrays.copyOfRange(arr,1,arr.length));
-        head.next = subListHead;
+        head.next  = createLinkedList(Arrays.copyOfRange(arr,1,arr.length));
         return head;
 
     }
@@ -31,8 +30,7 @@ public class LinkedListCreator {
             return null;
 
         ListNode head = new ListNode(data.get(0));
-        ListNode subListHead = createLinkedList(data.subList(1,data.size()));
-        head.next = subListHead;
+        head.next  = createLinkedList(data.subList(1,data.size()));
         return head;
 
     }
