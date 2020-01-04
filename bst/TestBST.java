@@ -13,11 +13,29 @@ public class TestBST {
         for(int num : arr)
             bst.add(num);
 
-        bst.preNode();
-        bst.preOrder();
+        bst.remove(5);
+        bst.inOrder();
 
-        System.out.println(bst.contains(6));
-        System.out.println(bst.contains(4));
+
+//        ArrayList list = new ArrayList();
+//        for(int i = 0; i <arr.length; i ++){
+//            list.add(bst.removeMax());
+//        }
+//        System.out.println(list);
+
+       // bst.preOrderNR();
+     //   bst.preOrder();
+
+       // bst.inOrder();
+      //  bst.inOrderNR();
+       // bst.postOrder();
+      //  bst.postOrderNR();
+        //bst.levelOrder();
+
+
+
+      //  System.out.println(bst.contains(6));
+      //  System.out.println(bst.contains(4));
 
 
     }
