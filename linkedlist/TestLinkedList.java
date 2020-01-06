@@ -24,6 +24,9 @@ public class TestLinkedList {
         linkedList.remove(2);
         System.out.println(linkedList);
 
+        linkedList.removeElement(4);
+        System.out.println(linkedList);
+
         System.out.println("contains 244" + linkedList.contain(244));
 
         linkedList.removeFirst();
