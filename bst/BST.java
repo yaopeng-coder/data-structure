@@ -490,7 +490,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     /**
-     * 返回删除最大元素后的头节点
+     * 返回删除最大元素后的头节点,递归
      * @param node
      * @return
      */
