@@ -8,11 +8,13 @@
       <sourceFolder url="file://$MODULE_DIR$/stack" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/linkedlist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sortingalgorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bst" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/search" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/set" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/map" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/priorityqueue" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
