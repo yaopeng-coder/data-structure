@@ -1,7 +1,6 @@
 package leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @program: data-structure
@@ -46,5 +45,51 @@ public class TwoSum {
         }
 
         throw new IllegalArgumentException("no  result");
+    }
+
+
+    //对两数之和进行改造，假设也有多解
+    public List<List<Integer>> threeSum(int[] nums) {
+
+
+        List<List<Integer>> list = new ArrayList();
+
+        if(nums.length < 2)
+            return list;
+
+        //对数组进行排序
+        Arrays.sort(nums);
+
+
+
+        //遍历数组
+        int l = 0 ; int r = nums.length - 1;
+        while( l < r){
+            if(nums[l] + nums[r] == 9){
+                list.add(Arrays.asList(nums[l], nums[r]));
+
+                while( l < r && nums[l] == nums[l + 1])
+                    l ++;
+
+                while( l < r && nums[r] == nums[r - 1])
+                    r--;
+
+                l++;
+                r--;
+            }else if(nums[l] + nums[r] < 9){
+                l++;
+            }else{
+                r --;
+            }
+
+        }
+
+
+
+
+
+        return list;
+
+
     }
 }
