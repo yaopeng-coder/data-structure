@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 149. 直线上最多的点数
  * @program: data-structure
  * @author: yaopeng
  * @create: 2020-03-11 10:22
@@ -51,7 +52,9 @@ public class MaxPoints {
         if(point1[1] == point2[1]){
             return Double.POSITIVE_INFINITY;
         }
-        return (double)(point1[0] - point2[0]) / (point1[1]- point2[1]);
+
+
+        return 1.0 * (point1[0] - point2[0]) / (point1[1]- point2[1]) + 0.0;
     }
 
 
